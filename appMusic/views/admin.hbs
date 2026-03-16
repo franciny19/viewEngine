@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{title}}</title>
+
+  <style>
+    body{
+      margin:0;
+      padding:0;
+      font-family: "Poppins", Arial, sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #ff0080);
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      color:white;
+    }
+
+    .music-container{
+      background: rgba(0,0,0,0.6);
+      padding:40px;
+      border-radius:20px;
+      text-align:center;
+      box-shadow:0 0 30px rgba(255,0,128,0.6);
+      backdrop-filter: blur(8px);
+      max-width:500px;
+      width:90%;
+    }
+
+    h1{
+      font-size:2.5rem;
+      margin-bottom:10px;
+      background: linear-gradient(90deg,#ff00cc,#ff8c00);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .music-icon{
+      font-size:60px;
+      margin-bottom:15px;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse{
+      0%{transform:scale(1)}
+      50%{transform:scale(1.15)}
+      100%{transform:scale(1)}
+    }
+
+    .player-bar{
+      margin-top:25px;
+      height:8px;
+      background:#444;
+      border-radius:10px;
+      overflow:hidden;
+    }
+
+    .progress{
+      width:60%;
+      height:100%;
+      background: linear-gradient(90deg,#ff00cc,#ff8c00);
+      animation: musicMove 4s infinite linear;
+    }
+
+    @keyframes musicMove{
+      0%{width:0%}
+      100%{width:100%}
+    }
+
+    .controls{
+      margin-top:20px;
+      font-size:28px;
+      letter-spacing:15px;
+    }
+
+    .controls span{
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .controls span:hover{
+      color:#ff00cc;
+      transform:scale(1.2);
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="music-container">
+    <div class="music-icon">🎵</div>
+    <h1>{{title}}</h1>
+
+    {{{body}}}
+
+    <div class="player-bar">
+      <div class="progress"></div>
+    </div>
+
+    <div class="controls">
+      <span>⏮</span>
+      <span>▶</span>
+      <span>⏭</span>
+    </div>
+  </div>
+
+</body>
+</html>

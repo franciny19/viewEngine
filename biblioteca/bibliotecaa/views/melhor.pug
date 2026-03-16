@@ -1,0 +1,99 @@
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Biblioteca
+
+    style.
+      body{
+        font-family: Arial, Helvetica, sans-serif;
+        margin:0;
+        background:#f4f6f9;
+      }
+
+      header{
+        background:#224abe;
+        color:white;
+        text-align:center;
+        padding:20px;
+      }
+
+      .hero{
+        text-align:center;
+        padding:60px 20px;
+        background:linear-gradient(135deg,#4e73df,#224abe);
+        color:white;
+      }
+
+      .hero h2{
+        font-size:36px;
+        margin-bottom:20px;
+      }
+
+      .hero p{
+        font-size:18px;
+        margin-bottom:30px;
+      }
+
+      .btn{
+        background:white;
+        color:#224abe;
+        padding:10px 20px;
+        text-decoration:none;
+        border-radius:6px;
+        font-weight:bold;
+      }
+
+      .card-container{
+        display:flex;
+        gap:20px;
+        justify-content:center;
+        padding:40px;
+        flex-wrap:wrap;
+      }
+
+      .card{
+        background:white;
+        padding:20px;
+        border-radius:10px;
+        box-shadow:0 2px 8px rgba(0,0,0,0.1);
+        width:200px;
+        text-align:center;
+      }
+
+      footer{
+        text-align:center;
+        padding:20px;
+        background:#eee;
+      }
+
+  body
+    header
+      h1 Biblioteca Mundial
+
+    main
+      section.hero
+        h2 Conheça mais sobre a melhor biblioteca do mundo!
+        p Aqui você encontra milhares de livros, autores e histórias incríveis.
+        a.btn(href="#livros") Explorar livros
+
+      section#livros
+        h2(style="text-align:center") Livros populares
+
+        .card-container
+          .card
+            h3 Dom Casmurro
+            p Autor: Machado de Assis
+
+          .card
+            h3 O Pequeno Príncipe
+            p Autor: Antoine de Saint-Exupéry
+
+          .card
+            h3 Harry Potter
+            p Autor: J.K. Rowling
+
+    footer
+      p © 2026 Biblioteca Mundial
+
